@@ -1,5 +1,7 @@
 package com.codenjoy.dojo.snake.client;
 
+import com.codenjoy.dojo.services.Point;
+
 import java.util.*;
 import java.util.stream.*;
 
@@ -17,10 +19,11 @@ public class BoardLee {
     private final int dimY;
     private int[][] data;
 
-    public BoardLee(int dimX, int dimY) {
+    public BoardLee(int dimX, int dimY, List<Point>... obstacles) {
         this.dimX = dimX;
         this.dimY = dimY;
         this.data = new int[dimY][dimX];
+        //TODO: put all obstacles from List<Point>... obstacles
     }
 
     public String element(PointLee p, boolean isFinal, List<PointLee> path) {

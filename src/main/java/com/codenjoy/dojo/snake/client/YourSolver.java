@@ -177,14 +177,14 @@ public class YourSolver implements Solver<Board> {
             statlee.addBadApple();
         }
         prevBadApple = badApple;
-
+/////////////////////////
         statlee.step();
         PointLee src = new PointLee(me.getX(), invertVervical(me.getY(), sizeY));
         PointLee dst = new PointLee(apple.getX(), invertVervical(apple.getY(), sizeY));
         PointLee badDst = new PointLee(badApple.getX(), invertVervical(badApple.getY(), sizeY));
 
         ArrayList<PointLee> orderSnake = getOrderSnake(board);
-        BoardLee boardLee = new BoardLee(sizeX, sizeY);
+        BoardLee boardLee = new BoardLee(sizeX, sizeY, snake, walls, stones);
         snake.forEach(p -> boardLee.setObstacle(p.getX(), invertVervical(p.getY(), sizeY)));
         walls.forEach(p -> boardLee.setObstacle(p.getX(), invertVervical(p.getY(), sizeY)));
         stones.forEach(p -> boardLee.setObstacle(p.getX(), invertVervical(p.getY(), sizeY)));
