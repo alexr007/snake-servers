@@ -23,7 +23,7 @@ public class BoardLee {
         this.dimX = dimX;
         this.dimY = dimY;
         this.data = new int[dimY][dimX];
-        //TODO: put all obstacles from List<Point>... obstacles.
+        //TODO: put all obstacles from List<Point>... obstacles
     }
 
     public String element(PointLee p, boolean isFinal, List<PointLee> path) {
